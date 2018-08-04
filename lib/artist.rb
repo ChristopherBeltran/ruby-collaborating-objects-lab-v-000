@@ -25,12 +25,7 @@ def save
 end 
 
 def self.find_or_create_by_name(name)
-    if @@all.detect { |artist| artist.name == name}
-      name
-    else 
-      self.new(name).save
-    end 
-  end 
+    
   
 def print_songs
   @songs.each {|s| puts s.name}

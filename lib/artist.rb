@@ -33,5 +33,5 @@ def self.find_or_create_by_name(name)
   end 
   
 def print_songs
-  @songs.each do {|s| puts s.name}
+  @songs.each do { |s| puts s.name}
 end 

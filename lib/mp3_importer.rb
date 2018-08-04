@@ -7,9 +7,9 @@ class MP3Importer
   end 
   
   def files
-    Dir.entries(path).reject{|f| f == '.' || f == '..'}
+   @files = Dir.entries(@path)
+   @files.delete_if {|file| file == "." || file == ".."}
   end 
-  
   def import
     self.files.each do |f| 
       song = Song.new_by_filename(f)
